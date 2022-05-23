@@ -3,7 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'maven-publish'
 }
+group = 'example.ptkit'
+version = '1.0'
 
 android {
     compileSdk 32
@@ -53,4 +56,17 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.3.7'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.eneseray'
+                artifactId = 'ptkit-kotlin'
+                version = '1.0'
+            }
+        }
+    }
 }
