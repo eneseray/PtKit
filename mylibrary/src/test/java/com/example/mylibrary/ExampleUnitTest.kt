@@ -1,4 +1,4 @@
-package com.example.ptkit_kotlin
+package com.example.mylibrary
 
 import org.junit.Test
 

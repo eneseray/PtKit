@@ -1,4 +1,4 @@
-package com.example.ptkit_kotlin
+package com.example.mylibrary
 
 class NullObjectException(message: String) : Exception(message)
 class ConflictingParametersException(message: String) : Exception(message)
