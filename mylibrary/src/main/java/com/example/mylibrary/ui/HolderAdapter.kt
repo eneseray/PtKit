@@ -12,7 +12,7 @@ import com.example.mylibrary.CollectionManager
 import com.example.mylibrary.ConflictingParametersException
 import com.example.mylibrary.ObservableEvent
 import com.example.mylibrary.R
-import kotlinx.android.synthetic.main.empty_card.view.*
+
 
 open class FireViewHolder<T>(inflater: LayoutInflater, private val parent: ViewGroup, resource: Int,
                              private val providedBind: ((T, View) -> Unit)? = null, private val providedFirstBind: ((View) -> Unit)? = null,
@@ -22,8 +22,8 @@ open class FireViewHolder<T>(inflater: LayoutInflater, private val parent: ViewG
     open fun bindEmptyCard(image: Int?, text: String?, onClick: (() -> Unit)?, onLongClick: (() -> Unit)?){
         itemView.setOnClickListener { onClick?.invoke() }
         itemView.setOnLongClickListener { onLongClick?.invoke(); true }
-        image?.let { itemView.imageView?.setImageResource(it) }
-        itemView.placeholderText?.text = text
+      //  image?.let { itemView.imageView?.setImageResource(it) }
+       // itemView.placeholderText?.text = text
         Log.i(TAG, "IMAGE $image, text $text")
     }
 
@@ -55,7 +55,7 @@ open class FireRecyclerViewAdapter<T>(protected val manager: CollectionManager<T
                                       private val layout: Int = R.layout.empty_card,
                                       protected val emptyOnClick: (() -> Unit)? = null,
                                       protected val emptyOnLongClick: (() -> Unit)? = null,
-                                      protected val emptyImage: Int? = R.drawable.ic_launcher_background,//R.drawable.abc_ic_star_black_48dp,
+                                      protected val emptyImage: Int? = com.google.android.gms.base.R.drawable.googleg_disabled_color_18,//R.drawable.abc_ic_star_black_48dp,
                                       protected val emptyText: String? = "Call to Action!",
                                       private val showFirstCard: Boolean = false,
                                       private val showFirstWhenEmpty: Boolean = false,
