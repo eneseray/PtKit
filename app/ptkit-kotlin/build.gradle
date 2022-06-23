@@ -6,7 +6,7 @@ plugins {
     id 'maven-publish'
 }
 group = 'example.ptkit'
-version = '1.0'
+version = '1.2'
 
 android {
     compileSdk 32
@@ -64,8 +64,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.eneseray'
-                artifactId = 'ptkit-kotlin'
-                version = '1.0'
+                artifactId = 'ptkit'
+                version = '1.2'
             }
         }
     }
