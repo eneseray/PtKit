@@ -14,8 +14,6 @@ import com.pintraveler.ptkit.ObservableEvent
 import com.pintraveler.ptkit.R
 import com.pintraveler.ptkit.databinding.EmptyCardBinding
 
-//import kotlinx.android.synthetic.main.empty_card.view.*
-
 open class FireViewHolder<T>(inflater: LayoutInflater, private val parent: ViewGroup, resource: Int,
                              private val providedBind: ((T, View) -> Unit)? = null, private val providedFirstBind: ((View) -> Unit)? = null,
                              private val providedLastBind: ((View) -> Unit)? = null) : RecyclerView.ViewHolder(inflater.inflate(resource, parent, false)){
