@@ -43,7 +43,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.eneseray'
                 artifactId = 'ptkit'
-                version = '1.22'
+                version = '1.23'
             }
         }
     }
