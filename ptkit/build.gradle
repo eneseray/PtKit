@@ -19,9 +19,7 @@ android {
         }
     }
 
-    buildFeatures {
-        viewBinding true
-    }
+
 }
 
 dependencies {
@@ -43,7 +41,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.eneseray'
                 artifactId = 'ptkit'
-                version = '1.23'
+                version = '1.24'
             }
         }
     }
