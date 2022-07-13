@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
     id 'maven-publish'
 }
 
@@ -39,7 +40,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.eneseray'
                 artifactId = 'ptkit'
-                version = '1.19'
+                version = '1.20'
             }
         }
     }
