@@ -12,18 +12,25 @@ import com.pintraveler.ptkit.CollectionManager
 import com.pintraveler.ptkit.ConflictingParametersException
 import com.pintraveler.ptkit.ObservableEvent
 import com.pintraveler.ptkit.R
-import kotlinx.android.synthetic.main.empty_card.view.*
+import com.pintraveler.ptkit.databinding.EmptyCardBinding
+
+//import kotlinx.android.synthetic.main.empty_card.view.*
 
 open class FireViewHolder<T>(inflater: LayoutInflater, private val parent: ViewGroup, resource: Int,
                              private val providedBind: ((T, View) -> Unit)? = null, private val providedFirstBind: ((View) -> Unit)? = null,
                              private val providedLastBind: ((View) -> Unit)? = null) : RecyclerView.ViewHolder(inflater.inflate(resource, parent, false)){
     protected open val TAG = "PTItemHolder"
 
+    private var binding: EmptyCardBinding = EmptyCardBinding.inflate(inflater)
+
     open fun bindEmptyCard(image: Int?, text: String?, onClick: (() -> Unit)?, onLongClick: (() -> Unit)?){
         itemView.setOnClickListener { onClick?.invoke() }
         itemView.setOnLongClickListener { onLongClick?.invoke(); true }
      //   image?.let { itemView.imageView?.setImageResource(it) }
-        itemView.placeholderText?.text = "deneme"
+
+        binding.placeholderText.text = "deneme"
+
+        //itemView.placeholderText?.text = "deneme"
         Log.i(TAG, "IMAGE $image, text $text")
     }
 
