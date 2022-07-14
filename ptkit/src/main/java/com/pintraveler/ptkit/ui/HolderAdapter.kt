@@ -24,7 +24,8 @@ open class FireViewHolder<T>(inflater: LayoutInflater, private val parent: ViewG
         itemView.setOnLongClickListener { onLongClick?.invoke(); true }
       //  image?.let { itemView.imageView?.setImageResource(it) }
        // itemView.placeholderText?.text = text
-        binding.placeholderText.text = "deneme"
+        binding.imageView.let { binding.imageView.setImageResource(image!!) }
+        binding.placeholderText.text = text
         Log.i(TAG, "IMAGE $image, text $text")
     }
 
